@@ -5,7 +5,10 @@
 	<meta charset="utf-8" />
 	<title>Iași Weather</title>
 	<link rel="stylesheet" href="styles/main.css" type="text/css"/>
-  <script>
+</head>
+
+<body>
+<script>
   'use strict'
   if ('https:' == document.location.protocol) {
     let markup = `Some widgets are blocked when using https.<br />
@@ -15,9 +18,6 @@
     document.body.appendChild(h2)
   }
   </script>
-</head>
-
-<body>
   <!-- viewweather.com -->
   <div>
     <div><div id="wwm_widget" style="width:700px;height:450px;"></div><div id="wwm_link"><a href="http://www.viewweather.com/" id="wwm_a1">ViewWeather.com - World weather forecast</a> | <a href="http://www.viewweather.com/w4357451-weather-forecast-for-iasi-judetul_iasi.html" id="wwm_a2">Iasi</a></div></div><script type="text/javascript">var wwm_id = 4357451;var wwm_width = 700;var wwm_height = 450;var wwm_days = 6;var wwm_lang = 'en';</script><script type="text/javascript" src="http://s2.viewweather.com/js/api.js?v3.1"></script>
