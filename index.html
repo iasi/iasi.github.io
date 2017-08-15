@@ -11,13 +11,17 @@
 <script>
   'use strict'
   if ('https:' == document.location.protocol) {
-    let markup = `Some widgets are blocked when using https.<br />
-                  Use the http version of this page. (<a href="http://iasi.github.io">http://iasi.github.io</a>)`
-    let h2 = document.createElement('h2')
-    h2.innerHTML = markup
-    document.body.appendChild(h2)
+    let markup = `<strong>Some widgets are not displayed</strong>
+                  <br />
+                  Weather widgets served over http are blocked on https pages.
+                  <br />
+                  Use the http version of this page <a href="http://iasi.github.io">http://iasi.github.io</a>`
+    let paragraph = document.createElement('p')
+    paragraph.innerHTML = markup
+    document.body.appendChild(paragraph)
   }
   </script>
+
   <!-- viewweather.com -->
   <div>
     <div><div id="wwm_widget" style="width:700px;height:450px;"></div><div id="wwm_link"><a href="http://www.viewweather.com/" id="wwm_a1">ViewWeather.com - World weather forecast</a> | <a href="http://www.viewweather.com/w4357451-weather-forecast-for-iasi-judetul_iasi.html" id="wwm_a2">Iasi</a></div></div><script type="text/javascript">var wwm_id = 4357451;var wwm_width = 700;var wwm_height = 450;var wwm_days = 6;var wwm_lang = 'en';</script><script type="text/javascript" src="http://s2.viewweather.com/js/api.js?v3.1"></script>
