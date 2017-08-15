@@ -43,22 +43,18 @@
       }
     }
 
-    function JS_ready() {
+    function remove_extra_divs() {
       // 'aw-more-block' class divs are the ones we don't want
-      removeElementsByClass('aw-more-block');
-    };
-
-    // first we wait for accuweather.com script to load
-    function JS_wait() {
+      // wait for accuweather.com script to load
       if ( document.getElementsByClassName('aw-more-block').length == 0 ) { 
-        window.setTimeout(JS_wait, 100); 
+        window.setTimeout(remove_extra_divs, 100);
       }
-      else { 
-        JS_ready(); 
+      else {
+        removeElementsByClass('aw-more-block');
       }
     }
 
-    window.onload = JS_wait;
+    window.onload = remove_extra_divs();
   </script>
 
 
